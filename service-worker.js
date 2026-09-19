@@ -1,0 +1,1 @@
+const C='dec-v21',A=['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png'];addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(A))));addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));
